@@ -1,4 +1,4 @@
-use pipe::pipe;
+use rusty_pipe::pipe;
 
 fn add(a: usize, b: usize) -> usize {
     a + b

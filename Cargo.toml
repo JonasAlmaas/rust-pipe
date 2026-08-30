@@ -1,7 +1,14 @@
 [package]
-name = "pipe"
+name = "rusty-pipe"
 version = "0.1.0"
 edition = "2024"
+description = "A pipeline-style procedural macro for chaining Rust expressions"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/JonasAlmaas/rusty-pipe"
+readme = "README.md"
+keywords = ["pipeline", "pipe", "macro", "chaining"]
+categories = ["rust-patterns", "development-tools"]
+exclude = [".github/"]
 
 [lib]
 proc-macro = true
