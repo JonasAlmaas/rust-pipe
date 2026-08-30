@@ -7,7 +7,6 @@ edition = "2024"
 proc-macro = true
 
 [dependencies]
-pipe_macro_impl = { path = "../pipe_macro_impl" }
 proc-macro2 = "1.0.107"
 quote = "1.0.47"
-syn = "3.0.4"
+syn = { version = "3.0.4", features = ["full", "visit-mut"] }

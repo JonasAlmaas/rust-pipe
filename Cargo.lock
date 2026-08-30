@@ -13,16 +13,6 @@ dependencies = [
 name = "pipe_macro"
 version = "0.1.0"
 dependencies = [
- "pipe_macro_impl",
- "proc-macro2",
- "quote",
- "syn",
-]
-
-[[package]]
-name = "pipe_macro_impl"
-version = "0.1.0"
-dependencies = [
  "proc-macro2",
  "quote",
  "syn",
