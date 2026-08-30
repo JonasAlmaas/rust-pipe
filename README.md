@@ -1,11 +1,11 @@
-# Rusty Pipe
+# Pipely
 
 This macro provides a more readable way to chain function calls in Rust. Nested calls
 become hard to follow as a chain grows, while a pipeline keeps each step in execution
 order.
 
 ```rust
-use rusty_pipe::pipe;
+use pipely::pipe;
 
 fn add(a: usize, b: usize) -> usize { a + b }
 fn double(value: usize) -> usize { value * 2 }

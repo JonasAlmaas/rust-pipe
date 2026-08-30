@@ -1,10 +1,10 @@
 [package]
-name = "rusty-pipe"
+name = "pipely"
 version = "0.1.0"
 edition = "2024"
 description = "A pipeline-style procedural macro for chaining Rust expressions"
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/JonasAlmaas/rusty-pipe"
+repository = "https://github.com/JonasAlmaas/rust-pipe"
 readme = "README.md"
 keywords = ["pipeline", "pipe", "macro", "chaining"]
 categories = ["rust-patterns", "development-tools"]
