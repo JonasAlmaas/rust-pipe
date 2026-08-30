@@ -24,7 +24,6 @@ mod tests {
     #[test]
     fn multiple_substitutions_work() {
         let result = pipe! { 4 |> add(_, _) };
-        let result = pipe! {};
         assert_eq!(result, 8);
     }
 }
