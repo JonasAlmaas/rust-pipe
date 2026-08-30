@@ -1,29 +1,15 @@
-#[cfg(test)]
-mod tests {
-    use pipe_macro::pipe;
+mod expand;
+mod parse;
 
-    fn add(a: usize, b: usize) -> usize {
-        a + b
-    }
+use quote::quote;
 
-    fn double(num: usize) -> usize {
-        num * 2
-    }
+pub(crate) struct Pipe {
+    input: syn::Expr,
+    stages: Vec<syn::Expr>,
+}
 
-    #[test]
-    fn it_works() {
-        let num = 4;
-        let result = pipe! {
-            num
-                |> add(2, _)
-                |> double(_)
-        };
-        assert_eq!(result, 12);
-    }
-
-    #[test]
-    fn multiple_substitutions_work() {
-        let result = pipe! { 4 |> add(_, _) };
-        assert_eq!(result, 8);
-    }
+#[proc_macro]
+pub fn pipe(input: proc_macro::TokenStream) -> proc_macro::TokenStream {
+    let pipe = syn::parse_macro_input!(input as Pipe);
+    quote! { #pipe }.into()
 }
